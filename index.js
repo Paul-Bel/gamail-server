@@ -22,6 +22,9 @@ let transporter = nodemailer.createTransport({
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
+app.get('/test', (req, res) => {
+    res.send('test success')
+})
 app.post('/sendMessage', async (req, res) => {
     let {from, subject, text} = req.body
 
