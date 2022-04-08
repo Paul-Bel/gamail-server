@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 app.get('/test', (req, res) => {
-    res.send('test success')
+    res.send(`test success ${smtp_login} and ${smtp_password} and` )
 })
 app.post('/sendMessage', async (req, res) => {
     let {from, subject, text} = req.body
